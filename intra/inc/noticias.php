@@ -1,0 +1,1 @@
+<div id="content"><?php require('pagination.php'); ?></div>

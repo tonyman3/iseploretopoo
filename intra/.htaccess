@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ index.php?pag=$1
+
+RewriteCond %{HTTP_HOST} ^iseploreto.edu.pe$ [OR]
+RewriteCond %{HTTP_HOST} ^www.iseploreto.edu.pe$
+
+<FilesMatch "^.+\.(jpg|jpeg|gif|png|bmp|JPG|JPEG|GIF|PNG|BMP)$ ">
+ErrorDocument 404 /img/defualt.jpg
+</FilesMatch>
